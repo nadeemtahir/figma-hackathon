@@ -83,8 +83,8 @@ const Footer2 = () => {
         <p>New arrivals</p>
         <p>Best sellers</p>
         <p>Recently viewed</p>
-        <p>Popular this week</p>
-        <p>All products</p>
+        <a href="/product">Popular this week</a>
+        <a href="/productlist">All products</a>
       </div>
 
       {/* Column 4: Categories */}
