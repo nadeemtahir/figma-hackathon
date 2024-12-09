@@ -9,40 +9,43 @@ const Page = () => {
   return (
     <div>
       <Navbar2 />
-      <div className="flex w-full h-screen text-[#ffffff]">
+      <div className="flex flex-col lg:flex-row w-full min-h-screen text-[#ffffff]">
         {/* Image Section */}
-        <div className="w-1/2">
+        <div className="w-full lg:w-1/2 h-64 lg:h-auto">
           <Image
             src="/images/imageleft.png"
             alt="The Dandy Chair"
+            layout="responsive"
             width={721}
             height={759}
-            className="w-full h-full object-cover"
+            className="object-cover"
           />
         </div>
-        
+
         {/* Text Section */}
-        <div className="w-1/2 bg-white p-10 text-[#2A254B]">
+        <div className="w-full lg:w-1/2 bg-white p-6 sm:p-10 text-[#2A254B]">
           {/* Title and Price */}
           <div className="mb-6">
-            <h1 className="text-3xl font-semibold font-[Clash Display]">
+            <h1 className="text-2xl sm:text-3xl font-semibold font-[Clash Display]">
               The Dandy Chair
             </h1>
-            <p className="text-xl font-normal font-[Satoshi] text-[#12131A]">
+            <p className="text-lg sm:text-xl font-normal font-[Satoshi] text-[#12131A]">
               £250
             </p>
           </div>
 
           {/* Description */}
           <div className="mb-6">
-            <h2 className="text-lg font-medium font-[Clash Display]">Description</h2>
-            <p className="text-base font-[Satoshi] text-[#505977]">
+            <h2 className="text-lg font-medium font-[Clash Display]">
+              Description
+            </h2>
+            <p className="text-sm sm:text-base font-[Satoshi] text-[#505977]">
               A timeless design, with premium materials features as one of our
-              most popular and iconic pieces. The dandy chair is perfect for
-              any stylish living space with beech legs and lambskin leather
+              most popular and iconic pieces. The dandy chair is perfect for any
+              stylish living space with beech legs and lambskin leather
               upholstery.
             </p>
-            <ul className="mt-4 list-disc pl-5 text-base font-[Satoshi] text-[#505977]">
+            <ul className="mt-4 list-disc pl-5 text-sm sm:text-base font-[Satoshi] text-[#505977]">
               <li>Premium material</li>
               <li>Handmade upholstery</li>
               <li>Quality timeless classic</li>
@@ -51,8 +54,10 @@ const Page = () => {
 
           {/* Dimensions */}
           <div className="mb-6">
-            <h2 className="text-lg font-medium font-[Clash Display]">Dimensions</h2>
-            <div className="flex space-x-6 mt-2">
+            <h2 className="text-lg font-medium font-[Clash Display]">
+              Dimensions
+            </h2>
+            <div className="flex flex-wrap gap-4 mt-2">
               <div>
                 <p className="text-sm font-[Clash Display]">Height</p>
                 <p className="text-sm font-[Clash Display]">110cm</p>
@@ -69,7 +74,7 @@ const Page = () => {
           </div>
 
           {/* Amount and Button */}
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
             <div className="flex items-center space-x-4">
               <h3 className="text-lg font-medium">Amount:</h3>
               <div className="flex items-center border rounded-md px-3 py-1 bg-[#F9F9F9]">
@@ -84,53 +89,61 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <div className="p-10">
-        {/* Heading */}
-        <div>
-          <h1 className="text-start py-10 mt-14 text-3xl p-10 text-[#2A254B]">You might also like</h1>
-        </div>
-  
-        {/* Images */}
-        <div className="flex gap-8 p-10">
+      \{/* Heading */}
+      {/* Heading */}
+      <div className="p-6 sm:p-10">
+        <h1 className="text-start py-6 sm:py-10 mt-8 sm:mt-14 text-2xl sm:text-3xl text-[#2A254B]">
+          You might also like
+        </h1>
+      </div>
+      {/* Images */}
+      <div className="flex flex-wrap lg:flex-nowrap gap-4 sm:gap-8 justify-center p-6 sm:p-10">
+        <div className="w-full sm:w-1/2 lg:w-1/4 flex justify-center">
           <Image
             src="/images/parent.png"
             alt="not found"
             width={305}
-            height={462} />
-          
+            height={462}
+            className="w-auto h-auto"
+          />
+        </div>
+        <div className="w-full sm:w-1/2 lg:w-1/4 flex justify-center">
           <Image
             src="/images/parent1.png"
             alt="not found"
             width={305}
             height={462}
+            className="w-auto h-auto"
           />
+        </div>
+        <div className="w-full sm:w-1/2 lg:w-1/4 flex justify-center">
           <Image
             src="/images/parent2.png"
             alt="not found"
             width={305}
             height={462}
+            className="w-auto h-auto"
           />
+        </div>
+        <div className="w-full sm:w-1/2 lg:w-1/4 flex justify-center">
           <Image
             src="/images/parent3.png"
             alt="not found"
             width={305}
             height={462}
+            className="w-auto h-auto"
           />
         </div>
-
-    
-
-
- {/* Button */}
-        <div className="flex justify-center mt-4">
-          <button className="bg-[#F9F9F9] px-6 py-3 text-lg rounded hover:bg-gray-200">
-            View Collection
-          </button>
-        </div>
-        </div>
-        <Brand/>
-        <Club/>
-        <Footer2/>
+      </div>
+      {/* Button */}
+      <div className="flex justify-center mt-6">
+        <button className="bg-[#F9F9F9] px-6 py-3 text-lg rounded hover:bg-gray-200">
+          View Collection
+        </button>
+      </div>
+      <Brand />
+      <Club />
+      <Footer2 />
     </div>
   );
 };
