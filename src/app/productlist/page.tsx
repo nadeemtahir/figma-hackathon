@@ -71,9 +71,9 @@ const Page = () => {
               <Image
                 src={src}
                 alt={`Product Card ${index + 1}`}
-                className="w-full object-cover rounded-md"
-                width={100}
-                height={100}
+                width={300} // Set width explicitly
+                height={400} // Set height explicitly to maintain proportions
+                className="rounded-md object-cover"
               />
             </div>
           ))}
