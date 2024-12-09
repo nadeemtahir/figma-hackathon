@@ -1,7 +1,7 @@
 "use client";
 import Footer from "../components/footer";
 import Header from "../components/navbar";
-import Image from "next/image"
+import Image from "next/image";
 
 const Page = () => {
   return (
@@ -18,7 +18,9 @@ const Page = () => {
           <Image
             src="/images/Frame 143.png"
             alt="Header Image"
-            className="w-full h-auto object-cover mt-3 sm:w-full" // Ensures full width on all screen sizes
+            width={1920} // Equivalent to w-full
+            height={1080} // Adjust height as needed
+            className="object-cover mt-3" // Keep object-cover for scaling
           />
         </div>
 
@@ -70,6 +72,8 @@ const Page = () => {
                 src={src}
                 alt={`Product Card ${index + 1}`}
                 className="w-full object-cover rounded-md"
+                width={100}
+                height={100}
               />
             </div>
           ))}
